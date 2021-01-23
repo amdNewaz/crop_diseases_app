@@ -113,7 +113,7 @@ class _MainBottomDashboardState extends State<MainBottomDashboard> {
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Icon(Icons.ac_unit),
-              label: 'Camera',
+              label: 'POTATO',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.camera),
@@ -121,7 +121,7 @@ class _MainBottomDashboardState extends State<MainBottomDashboard> {
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.payment_sharp),
-              label: 'Tomato',
+              label: 'TOMATO',
             ),
           ],
         ),

@@ -11,12 +11,12 @@ class _CameraScreenState extends State<CameraScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-          body: Container(
-         child: Column(
-              children: [
-             Text('Camera'),
-           ],
-         ),
+      body: Container(
+        child: Column(
+          children: [
+            Text('Camera'),
+          ],
+        ),
       ),
     );
   }
