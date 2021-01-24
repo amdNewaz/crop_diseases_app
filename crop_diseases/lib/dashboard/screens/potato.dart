@@ -13,7 +13,7 @@ class _PotatoScreenState extends State<PotatoScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-              child: Container(
+        child: Container(
           child: Column(
             children: [
               Text(
@@ -26,7 +26,6 @@ class _PotatoScreenState extends State<PotatoScreen> {
                 margin: EdgeInsets.all(10),
                 height: 180,
                 decoration: BoxDecoration(
-               
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Carousel(
@@ -37,7 +36,12 @@ class _PotatoScreenState extends State<PotatoScreen> {
                   ],
                 ),
               ),
-              Text('Potato potato potato'),
+              Text('Aster yellows'),
+              Text(
+                  '''Aster leafhopper (Macrosteles fascifrons) and other leafhoppers,
+              and the phytoplasma can be carried in infected tubers. Over 300 kinds of plants, 
+              including a wide variety of vegetables. Broccoli, cabbage, carrot, onion, potato, 
+              pumpkin, radish, shallot, spinach, squash, tomato, and more.'''),
             ],
           ),
         ),

@@ -1,8 +1,8 @@
 import 'dart:io';
 
-import 'package:crop_diseases/screens/camera.dart';
-import 'package:crop_diseases/screens/potato.dart';
-import 'package:crop_diseases/screens/tomato.dart';
+import 'package:crop_diseases/dashboard/screens/camera.dart';
+import 'package:crop_diseases/dashboard/screens/potato.dart';
+import 'package:crop_diseases/dashboard/screens/tomato.dart';
 import 'package:flutter/material.dart';
 
 class DashBoard extends StatefulWidget {
@@ -101,7 +101,7 @@ class _MainBottomDashboardState extends State<MainBottomDashboard> {
               icon: Icon(Icons.search),
               onPressed: () {
                 //showSearch(context: context, delegate: DataSearch(listWords));
-              })
+              },),
         ],
       ),
       bottomNavigationBar: Container(
