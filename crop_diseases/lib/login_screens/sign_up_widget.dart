@@ -1,4 +1,3 @@
-
 import 'package:crop_diseases/dashboard/dashboard.dart';
 import 'package:crop_diseases/widget/background_painter.dart';
 import 'package:flutter/cupertino.dart';
@@ -15,33 +14,65 @@ class SignUpWidget extends StatelessWidget {
         ],
       );
 
-  Widget buildSignUp() => Column(
-        children: [
-          Spacer(),
-          Align(
-            alignment: Alignment.centerLeft,
-            child: Container(
-              margin: EdgeInsets.symmetric(horizontal: 20),
-              width: 175,
-              child: Text(
-                'Welcome Back To MyApp',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                ),
+  Widget buildSignUp() => Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.grey[300],
+          automaticallyImplyLeading: false,
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text('Welcome',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontFamily: 'Playfair Display',
+                      fontSize: 36)),
+              Row(
+                children: [
+                  IconButton(icon: Icon(Icons.person), onPressed: () {})
+                ],
               ),
+            ],
+          ),
+          actions: [
+            IconButton(
+              icon: Container(
+                child: Image(
+                  image: AssetImage(
+                    'assets/icons/L1.png',
+                  ),
+                  fit: BoxFit.cover,
+                ),
+                height: 100,
+                width: 100,
+              ),
+              onPressed: () {
+                //showSearch(context: context, delegate: DataSearch(listWords));
+              },
             ),
-          ),
-          Spacer(),
-          GoogleSignupButtonWidget(),
-          SizedBox(height: 12),
-          Text(
-            'Login to continue',
-            style: TextStyle(fontSize: 16),
-          ),
-          Spacer(),
-        ],
+          ],
+        ),
+        body: Column(
+          children: [
+            Spacer(),
+            Align(
+              alignment: Alignment.centerLeft,
+              
+            ),
+            Spacer(),
+            SizedBox(height: 12),
+               Center(
+              child: Image.asset('assets/icons/L1.png', height: 200, width: 300,),
+              ),
+           
+
+         
+
+
+            Text('--------------------------------    With    ----------------------------------'),
+            GoogleSignupButtonWidget(),
+            Spacer(),
+          ],
+        ),
       );
 }
 
@@ -51,17 +82,17 @@ class GoogleSignupButtonWidget extends StatelessWidget {
         padding: EdgeInsets.all(4),
         child: OutlineButton.icon(
           label: Text(
-            'Sign In With Google',
+            ' Google SignUp',
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
           ),
           shape: StadiumBorder(),
           padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-          highlightedBorderColor: Colors.black,
-          borderSide: BorderSide(color: Colors.black),
+         // highlightedBorderColor: Colors.black,
+          //borderSide: BorderSide(color: Colors.black),
           textColor: Colors.black,
           icon: FaIcon(
             FontAwesomeIcons.google,
-            color: Colors.red,
+            color: Colors.black,
           ),
           onPressed: () {
             Navigator.push(

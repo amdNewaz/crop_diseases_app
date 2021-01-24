@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:ui';
 
 import 'package:crop_diseases/dashboard/screens/camera.dart';
 import 'package:crop_diseases/dashboard/screens/potato.dart';
@@ -85,23 +86,31 @@ class _MainBottomDashboardState extends State<MainBottomDashboard> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
+        backgroundColor: Colors.grey[300],
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text('Crop'),
+            Text('Crop',
+            style: TextStyle(
+              color: Colors.black87,
+            ),
+            ),
             Row(
-              children: [
-                IconButton(icon: Icon(Icons.person), onPressed: () {})
-              ],
+              children: [IconButton(icon: Icon(Icons.face,
+              color: Colors.black87,
+              )
+              , onPressed: () {})],
             ),
           ],
         ),
         actions: [
           IconButton(
-              icon: Icon(Icons.search),
-              onPressed: () {
-                //showSearch(context: context, delegate: DataSearch(listWords));
-              },),
+            icon: Icon(Icons.search,
+            color: Colors.black87),
+            onPressed: () {
+              //showSearch(context: context, delegate: DataSearch(listWords));
+            },
+          ),
         ],
       ),
       bottomNavigationBar: Container(
