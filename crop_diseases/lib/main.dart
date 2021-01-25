@@ -96,88 +96,101 @@ class _GoogleSignAppState extends State<GoogleSignApp> {
           ],
         ),
       ),
-      body: SingleChildScrollView(
+      body: Builder(
+        builder: (context) => Stack(
+          fit: StackFit.expand,
+          children: [           
+            SingleChildScrollView(
               child: Container(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                'assets/images/loginimage.png',
-                height: 250,
-              ),
-              Text(
-                'CROP',
-                style: TextStyle(
-                  letterSpacing: 5,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              
-              
-              Container(
-                width: 250.0,
-                child: Align(
-                  alignment: Alignment.center,
-                  child: RaisedButton(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: new BorderRadius.circular(30.0)),
-                    color: Color(0xffffffff),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: <Widget>[
-                        Icon(
-                          FontAwesomeIcons.google,
-                          color: Color(0xffCE107C),
-                        ),
-                        SizedBox(width: 10.0),
-                        Text(
-                          'Sign in with Google',
-                          style: TextStyle(color: Colors.black, fontSize: 18.0),
-                        ),
-                      ],
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      'assets/images/loginimage.png',
+                      height: 250,
                     ),
-                    onPressed: () => _signIn(context)
-                        .then((FirebaseUser user) => print(user))
-                        .catchError((e) => print(e)),
-                  ),
-                ),
-              ),
-              Row(children: [
-                Expanded(child: Divider( thickness: 1.5,
-                      color: Colors.red,)),
-                Text("OR"),
-                Expanded(child: Divider( thickness: 1.5,
-                      color: Colors.red,)),
-              ]),
-              Container(
-                width: 250.0,
-                child: Align(
-                  alignment: Alignment.center,
-                  child: RaisedButton(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30.0)),
-                    color: Color(0xffffffff),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: <Widget>[
-                        Icon(
-                          FontAwesomeIcons.solidEnvelope,
-                          color: Color(0xff4caf50),
-                        ),
-                        SizedBox(width: 10.0),
-                        Text(
-                          'Sign in with Email',
-                          style: TextStyle(color: Colors.black, fontSize: 18.0),
-                        ),
-                      ],
+                    Text(
+                      'CROP',
+                      style: TextStyle(
+                        letterSpacing: 5,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                    onPressed: () {},
-                  ),
+                    Container(
+                      width: 250.0,
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: RaisedButton(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: new BorderRadius.circular(30.0)),
+                          color: Color(0xffffffff),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: <Widget>[
+                              Icon(
+                                FontAwesomeIcons.google,
+                                color: Color(0xffCE107C),
+                              ),
+                              SizedBox(width: 10.0),
+                              Text(
+                                'Sign in with Google',
+                                style: TextStyle(
+                                    color: Colors.black, fontSize: 18.0),
+                              ),
+                            ],
+                          ),
+                          onPressed: () => _signIn(context)
+                              .then((FirebaseUser user) => print(user))
+                              .catchError((e) => print(e)),
+                        ),
+                      ),
+                    ),
+                    Row(children: [
+                      Expanded(
+                          child: Divider(
+                        thickness: 1.5,
+                        color: Colors.red,
+                      )),
+                      Text("OR"),
+                      Expanded(
+                          child: Divider(
+                        thickness: 1.5,
+                        color: Colors.red,
+                      )),
+                    ]),
+                    Container(
+                      width: 250.0,
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: RaisedButton(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30.0)),
+                          color: Color(0xffffffff),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: <Widget>[
+                              Icon(
+                                FontAwesomeIcons.solidEnvelope,
+                                color: Color(0xff4caf50),
+                              ),
+                              SizedBox(width: 10.0),
+                              Text(
+                                'Sign in with Email',
+                                style: TextStyle(
+                                    color: Colors.black, fontSize: 18.0),
+                              ),
+                            ],
+                          ),
+                          onPressed: () {},
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
