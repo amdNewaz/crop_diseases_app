@@ -1,4 +1,4 @@
-import 'package:crop_diseases/provider/google_sign_in.dart';
+/* import 'package:crop_diseases/provider/google_sign_in.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -48,3 +48,4 @@ class LoggedInWidget extends StatelessWidget {
     );
   }
 }
+ */

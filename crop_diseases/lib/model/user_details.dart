@@ -14,8 +14,11 @@ class UserDetails {
   );
 }
 
-
 class ProviderDetails {
-  ProviderDetails(this.providerDetails);
-  final String providerDetails;
+   final String providerDetails;
+
+  ProviderDetails(
+    this.providerDetails   
+  );
+ 
 }
