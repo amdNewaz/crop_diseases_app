@@ -1,8 +1,10 @@
 import 'package:crop_diseases/dashboard/dashboard.dart';
+import 'package:crop_diseases/provider/google_sign_in.dart';
 import 'package:crop_diseases/widget/background_painter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
 
 class SignUpWidget extends StatelessWidget {
   @override
@@ -95,11 +97,10 @@ class GoogleSignupButtonWidget extends StatelessWidget {
             color: Colors.black,
           ),
           onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => DashBoard()));
-            /* final provider =
+           
+             final provider =
                 Provider.of<GoogleSignInProvider>(context, listen: false);
-            provider.login(); */
+            provider.login(); 
           },
         ),
       );
